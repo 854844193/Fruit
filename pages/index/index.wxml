@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="index">
+<text></text>
+ <view class="header">
+ </view>
+ <view class="container">
+ </view>
+ <view class="footer">
+ </view>
+</view>
