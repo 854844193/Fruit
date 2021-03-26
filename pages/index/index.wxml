@@ -1,10 +1,21 @@
 <!--index.wxml-->
 <view class="index">
-<text></text>
- <view class="header">
- </view>
- <view class="container">
- </view>
- <view class="footer">
- </view>
+	<view class="header ">
+		<view class="nav alignCenter">
+			<text class="navTitle">果色天香</text>
+			<view class="searchBox">
+				<view class="searchText alignCenter">
+					<icon type="search" size="14"></icon>
+					<input class="searchInput" placeholder="{{tipText}}" value="{{searchText}}"></input> 
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="container">
+		<scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y>
+			    <view class='hidden'></view>
+		</scroll-view>
+	</view>
+	<view class="footer">
+	</view>
 </view>

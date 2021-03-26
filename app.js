@@ -12,8 +12,19 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+
+    // 获取顶部栏信息
+    wx.getSystemInfo({
+      success: res => {
+        //导航高度
+        this.globalData.navHeight = res.statusBarHeight + 46;
+      }, fail(err) {
+        console.log(err);
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    navHeight:0
   }
 })
