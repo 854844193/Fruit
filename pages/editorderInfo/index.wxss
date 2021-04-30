@@ -1,0 +1,65 @@
+/* pages/editorderInfo/index.wxss */
+.orderInfo {
+  padding: 20rpx;
+}
+
+.history {
+  margin-bottom: 20rpx;
+
+}
+
+.rightCor {
+  float: right;
+}
+
+.inputItem {
+  position: relative;
+  font-size: 28rpx;
+  height: 50rpx;
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  border: 2rpx solid #aaa;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+ 
+}
+.inputItem>.itemtext{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rightIcon {
+  position: absolute;
+  right: -16rpx;
+  top: -16rpx;
+  z-index: 11;
+}
+
+.current {
+  position: relative;
+  border: 2rpx solid #eee;
+}
+
+.inputInfo {
+  background: #fff;
+  padding: 30rpx 0;
+  padding-left: 60rpx;
+}
+
+textarea {
+  height: 200rpx;
+}
+
+.count {
+  color: #aaa;
+  font-size: 24rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+.confirmBtn{
+  margin-top: 30rpx;
+  font-size: 36rpx !important;
+  color: black !important;
+}

@@ -1,0 +1,28 @@
+/* pages/discount/index.wxss */
+.dis {
+  height: 100vh;
+  background: #fafafa;
+}
+
+.backIcon {
+  margin-left: 20rpx;
+}
+
+.Title {
+  width: 100%;
+  height: 60rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -60rpx;
+}
+
+.rank {
+  border: 30px solid #e6686e;
+  height: 0;
+  width: 0;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}

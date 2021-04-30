@@ -1,1 +1,29 @@
 <!--pages/category/category.wxml-->
+<view class="category">
+	<scroll-view scroll-y="true" class="leftNav">
+		<view wx:for="{{navList}}" wx:key="index" class="{{active==index?'selected':'normal'}}" data-id="{{index}}" bindtap='switchNav'>
+			{{item.navTitle}}
+		</view>
+	</scroll-view>
+	<view class="rightList">
+		<swiper current='{{currentTab}}' vertical='{{true}}'>
+			<!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+			<swiper-item wx:for="{{navList}}" wx:key="index" id="{{active}}" catchtouchmove="false">
+				<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-num="3" data-id="{{item}}" bindtap="jump">
+					<view slot="thumb">
+						<image src="{{item.img}}"></image>
+					</view>
+					<view slot="footer">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+					</view>
+				</van-card>
+			</swiper-item>
+		</swiper>
+	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

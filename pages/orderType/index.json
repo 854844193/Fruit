@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "BTop": "../components/BackTop/BackTop"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "我的订单"
+
+}

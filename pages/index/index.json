@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationStyle":"custom"
+  "usingComponents": {
+    "Tabs": "../components/Tabs/Tabs",
+    "BTop": "../components/BackTop/BackTop"
+  },
+  "component": true,
+  "navigationBarTitleText": "Sweet Fruit"
 }

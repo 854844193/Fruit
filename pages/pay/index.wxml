@@ -1,0 +1,70 @@
+<!--pages/pay/index.wxml-->
+<view class="pay">
+	<view class="paycard top">
+		<view class="cardTop psnName">
+			<text>收货人：</text>
+			<text class="desc1">{{person.name}}</text>
+			<text>{{person.phone}}</text>
+			<text class="toEdit" data-person="{{person}}" bindtap="toEdit">修改</text>
+		</view>
+		<view class="psnAdd">
+			<text>地 址：</text>
+			<text class="desc2">{{person.add}}</text>
+		</view>
+	</view>
+	<view class="shopList paycard">
+		<view class="cardTop">
+			<text>商品列表</text>
+			<text class="total">共{{total}}件</text>
+		</view>
+		<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" num="{{item.nums}}" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-obj="{{item}}" bindtap="jump">
+			<view slot="thumb">
+				<image class="thumbImg" src="{{item.img}}"></image>
+			</view>
+		</van-card>
+	</view>
+	<view class="paycard">
+		<van-cell title="优惠券" value="暂无优惠券" is-link border="{{false}}" />
+	</view>
+	<view class="paycard">
+		<van-cell title="商品总额" border="{{false}}">
+			<text class="orderPrice">￥{{totalPrice/100}}</text>
+		</van-cell>
+	</view>
+	<view class="paycard orderInfo">
+		<van-cell title="订单备注" is-link border="{{false}}" data-info="{{orderInfo}}" bindtap="toInput">
+			<text class="orderDesc">{{orderInfo}}</text>
+		</van-cell>
+	</view>
+	<!-- 底部bar -->
+	<van-submit-bar price="{{ totalPrice }}" label="待支付：" button-text="立即支付" bind:submit="onSubmit" button-class="btnColor" />
+	<!-- 底部确认信息 -->
+	<van-action-sheet show="{{ btmShow }}" title="收获信息" bind:close="onBtmClose">
+		<view class="infoDetails">
+			<!-- <van-icon name="cross" color="black" size="30rpx" style="float:right" bindtap="onBtmClose" /> -->
+			<view class="infoCon">
+				<view class="person">
+					<van-icon name="manager" color="#c7a252" size="30rpx" style="margin-right:20rpx" />
+					<text>收货人：</text>
+					<text class="desc1 bold">{{person.name}}</text>
+					<text class="bold">{{person.phone}}</text>
+				</view>
+				<view class="address">
+					<van-icon name="location" color="#c7a252" size="30rpx" style="margin-right:20rpx" />
+					<text>地 址：</text>
+					<text class="desc2 bold">{{person.add}}</text>
+				</view>
+			</view>
+			<view class="btmBtn">
+				<view class="bgc" bindtap="confirmPay">确认并支付</view>
+			</view>
+		</view>
+	</van-action-sheet>
+	<!-- 支付成功提示 -->
+	<van-toast id="van-toast">
+		<van-icon name="success" color="#45b97c" size="100rpx" />
+		<text>支付成功</text>
+	</van-toast>
+	<!-- 回到顶部 -->
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

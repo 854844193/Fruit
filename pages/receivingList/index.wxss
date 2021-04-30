@@ -1,0 +1,29 @@
+/* pages/receiving List/index.wxss */
+page{
+  background: #efefef;
+}
+.itemCard {
+  margin-top: 10rpx;
+  padding: 0 20rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightbox {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.grey{
+  color: #afafaf;
+}
+.edit{
+  font-size: 30rpx;
+}
+.btnText{
+  color: black;
+}

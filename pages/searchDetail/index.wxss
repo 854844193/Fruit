@@ -1,0 +1,48 @@
+/* pages/searchDetail/index.wxss */
+.searchDetail{
+  height: 100vh;
+  background: #fafafa;
+}
+.backIcon {
+  margin-left: 20rpx;
+}
+.searchBox {
+  width: 380rpx;
+  height: 60rpx;
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 30rpx;
+  background: #eee;
+  margin-left: 100rpx;
+}
+
+.searchItem {
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  background: #aaa;
+  font-size: 24rpx;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.tabs_title{
+  display: flex;
+  padding: 10rpx 0;
+  background: #fff;
+}
+.title_item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  color: #fcaf17;
+}
+
+.tabscon {
+  padding: 0 20rpx;
+}

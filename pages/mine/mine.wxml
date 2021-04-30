@@ -1,1 +1,84 @@
 <!--pages/mine.wxml-->
+<view class="mine">
+	<view class="topImg">
+		<van-image width="120rpx" height="120rpx" fit="cover" round src="{{headImg}}" use-error-slot bindtap="toPersonal" />
+		<text>{{username}}</text>
+	</view>
+	<view class="mineCon">
+		<view class="balance marginBtm">
+			<view class="coupon">
+				<view class="nums">0张</view>
+				<view>优惠券</view>
+			</view>
+			<view>|</view>
+			<view class="packet">
+				<view class="nums">10.00</view>
+				<view>红包</view>
+			</view>
+		</view>
+		<view class="address marginBtm">
+			<view class="corAdd">
+				<text style="font-weight:600;text-align:left">当前收货地址</text>
+				<text style="float:right">切换收货地址></text>
+			</view>
+			<view class="addInfo">
+				<view class="addCon">
+					<view class="leftAdd">
+						<view class="siteName"><text>恒大名都百世邻里</text></view>
+						<view class="tags">
+							<van-tag plain type="primary">支持冷冻</van-tag>
+							<van-tag plain type="primary">支持冷藏</van-tag>
+						</view>
+						<view class="siteInfo">
+							<text>昆明市五华区海屯路与科新路交叉口昆明恒大名都2-1栋公寓百世邻里便利店</text>
+						</view>
+					</view>
+					<view>|</view>
+					<view class="rightIcon">
+						<view>
+							<van-icon name="location" color="#f26522" size="40rpx" />
+							<view>路线</view>
+						</view>
+						<view>
+							<van-icon name="phone" color="#f26522" size="40rpx" />
+							<view>电话</view>
+						</view>
+					</view>
+				</view>
+				<view class="quesTip">
+					<van-icon name="youzan-shield" color="#" />
+					<text>订单有任何问题，团长帮你解决</text>
+				</view>
+			</view>
+		</view>
+		<view class="orderType marginBtm">
+			<view wx:for="{{ orderTypeList }}" wx:key="index" data-index="{{index}}" bindtap="toOrder">
+				<van-icon name="{{item.icon}}" size="60rpx" info="{{item.info>99?'99+':item.info}}" />
+				<view>{{item.name}}</view>
+			</view>
+		</view>
+		<view class="activity marginBtm">
+			<view class="actTitle">
+				<text>活动中心</text>
+			</view>
+			<scroll-view class="actList" enable-flex scroll-x enhanced show-scrollbar="false">
+				<view class="actItem" wx:for="{{ actList }}" wx:key="index">
+					<van-icon name="{{item.icon}}" size="60rpx" color="{{item.color}}" />
+					<view class="actItemTitle">{{item.title}}</view>
+					<view class="actItemDesc">{{item.desc}}</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view class="marginBtm">
+			<van-grid square column-num="5" border="false">
+				<van-grid-item use-slot wx:for="{{ bottomList }}" wx:key="index">
+					<view class="girdItem">
+						<van-icon name="{{item.icon}}" size="60rpx" color="#f26522" info="{{item.info>99?'99+':item.info}}" dot="{{item.dot}}" />
+						<view class="girdDesc">{{item.desc}}</view>
+					</view>
+				</van-grid-item>
+			</van-grid>
+		</view>
+	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

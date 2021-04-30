@@ -1,21 +1,51 @@
 <!--index.wxml-->
 <view class="index">
-	<view class="header ">
-		<view class="nav alignCenter">
-			<text class="navTitle">果色天香</text>
-			<view class="searchBox">
-				<view class="searchText alignCenter">
-					<icon type="search" size="14"></icon>
-					<input class="searchInput" placeholder="{{tipText}}" value="{{searchText}}"></input> 
-				</view>
-			</view>
-		</view>
+	<view class="header">
+		<button class="searchBtn" size="mini" data-num="1" data-text="{{tipText}}" bindtap='jump'>
+			<van-icon name="search" />
+			<text>{{tipText}}</text>
+		</button>
+	</view>
+	<view class="banner">
+		<swiper autoplay="true" circular indicator-dots easing-function="linear">
+			<swiper-item wx:for="{{bannerList}}" wx:key="*this">
+				<cover-image src="{{item}}" ></cover-image>
+			</swiper-item>
+		</swiper>
 	</view>
 	<view class="container">
-		<scroll-view class='bg-gray overflow' style='height:calc(100vh - {{navH}}px)' scroll-y>
-			    <view class='hidden'></view>
-		</scroll-view>
+		<view class="newUser">
+			<view class="shopTitle">
+				<text>新人专享</text>
+				<text>任选1份新人专享商品</text>
+				<text data-num="2" bindtap="jump">查看全部></text>
+			</view>
+			<scroll-view class="fruitShop" enable-flex scroll-x>
+				<view class="shopItem" wx:for="{{newUserShop}}" wx:key="index" data-num="3" data-id="{{item}}" bindtap="jump">
+					<view class="itemImg">
+						<image src="{{item.img}}"></image>
+					</view>
+					<view class="itemDesc">
+						<text>{{item.fname}}</text>
+						<text>￥{{item.currentPrice}}</text>
+						<text>￥{{item.oldPrice}}</text>
+					</view>
+					<view class="addBlock">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<van-button wx:if="{{item.nums== 0}}" type="info" size="mini" round color="#fcaf17" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">
+							加入购物车
+						</van-button>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<view class="navTab">
+			<Tabs navTab="{{tabList}}" bind:change="jump"></Tabs>
+		</view>
 	</view>
-	<view class="footer">
-	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
 </view>

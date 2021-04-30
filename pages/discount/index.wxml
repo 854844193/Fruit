@@ -1,0 +1,28 @@
+<!--pages/discount/index.wxml-->
+<view class="dis">
+	<view class="custom flex_center " style="padding-top:{{statusBarHeight*2}}rpx">
+		<van-icon class="backIcon" name="arrow-left" size="40rpx" bindtap="reBack" />
+		<view class="Title">
+			<van-icon name="fire" size="60rpx" color="#d71345" />
+			特惠排行榜
+		</view>
+	</view>
+	<view class="empty_custom" style="padding-top:{{(statusBarHeight+45)*2}}rpx">
+		<view class="cardItem">
+			<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" tag="{{item.rank}}" desc="描述信息" title="{{item.fname}}" data-obj="{{item}}" bindtap="jump">
+				<view slot="thumb">
+					<image class="thumbImg" src="{{item.img}}"></image>
+				</view>
+				<view slot="footer">
+					<view wx:if="{{item.nums!= 0}}" class="corbtn">
+						<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+						<view class="corItem nums">{{item.nums}}</view>
+						<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+					</view>
+					<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+				</view>
+			</van-card>
+		</view>
+	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

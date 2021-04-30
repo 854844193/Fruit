@@ -1,0 +1,20 @@
+<!--pages/orderType/index.wxml-->
+<view class="order">
+	<van-tabs class="tab" active="{{isActive}}" animated swipeable sticky color="#fcaf17" ellipsis="false" bind:click="toggle">
+		<van-tab wx:for="{{orderType}}" wx:key="index" title="{{item}}" name="{{index}}">
+			<view class="tabscon">
+				<view wx:if="{{hasOrderData}}">{{item}}</view>
+				<view class="Nolist" wx:else>
+					<image src="../images/orderNo.png"></image>
+					<view class="desc">
+						<text>您还没有订单~快去逛逛吧~</text>
+					</view>
+					<button class="backBtn" bindtap="backHome" size="small">
+						去逛逛
+					</button>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

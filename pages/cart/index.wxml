@@ -1,0 +1,44 @@
+<view class="cart">
+	<view class="cartitem" wx:for="{{shopList}}" wx:key="index" wx:if="{{item.nums>0}}">
+		<van-checkbox value="{{ item.checked }}" data-item="{{item}}" data-index="{{index}}" bind:change="onChange"></van-checkbox>
+		<van-card price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}">
+			<view slot="thumb">
+				<image src="{{item.img}}"></image>
+			</view>
+			<view slot="footer">
+				<view class="corbtn">
+					<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" data-cate="cart" catchtap catchtap="corNums">-</view>
+					<view class="corItem nums">{{item.nums}}</view>
+					<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" data-cate="cart" catchtap catchtap="corNums">+</view>
+				</view>
+			</view>
+		</van-card>
+	</view>
+	<van-divider dashed contentPosition="center" customStyle="color: #fcaf17; border-color: #fcaf17; font-size: 18px">
+		<van-icon name="like" color="#ef4136" />
+		您可能会买
+	</van-divider>
+	<view class="wannaLike">
+		<view class="cartitem" wx:for="{{wannerList}}" wx:key="index">
+			<van-card price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-obj="{{item}}" bindtap="toDetails">
+				<view slot="thumb">
+					<image  class="thumbImg" src="{{item.img}}"></image>
+				</view>
+				<view slot="footer">
+					<view wx:if="{{item.nums!= 0}}" class="corbtn">
+						<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" data-cate="wanner" catchtap="corNums">-</view>
+						<view class="corItem nums">{{item.nums}}</view>
+						<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" data-cate="wanner" catchtap catchtap="corNums">+</view>
+					</view>
+					<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+				</view>
+			</van-card>
+		</view>
+	</view>
+	<van-submit-bar price="{{ totalPrice }}" button-text="{{totalNums>0?payText:'去支付'}}" disabled="{{totalNums==0}}" bind:submit="toPay" button-class="btnColor">
+		<van-checkbox value="{{ totalChecked}}" bind:change="totalCheck"></van-checkbox>
+		<view slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view>
+	</van-submit-bar>
+	<van-dialog id="van-dialog" />
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

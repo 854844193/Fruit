@@ -1,0 +1,53 @@
+<!--pages/searchDetail/index.wxml-->
+<view class="searchDetail">
+	<view class="custom flex_center " style="padding-top:{{statusBarHeight*2}}rpx">
+		<van-icon class="backIcon" name="arrow-left" size="40rpx" bindtap="toSearch" />
+		<view class="searchBox" bindtap="toSearch">
+			<van-icon name="search" />
+			<view class="searchItem" wx:if="{{ searText }}">
+				{{searText}}
+				<van-icon name="cross" catchtap="onClose" />
+			</view>
+		</view>
+	</view>
+	<view class="empty_custom" style="padding-top:{{(statusBarHeight+45)*2}}rpx">
+		<view class="tabs_title">
+			<view wx:for="{{conditonList}}" wx:key="index" class="title_item {{ index==isActive?'active':''}}" data-ind="{{index}}" data-id="{{item}}" bindtap="toggle">
+				{{item}}
+			</view>
+		</view>
+		<view class="tabscon" wx:if="{{currentInd==isActive}}">
+			<view class="cardItem">
+				<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-obj="{{item}}" bindtap="jump">
+					<view slot="thumb">
+						<image class="thumbImg" src="{{item.img}}"></image>
+					</view>
+					<view slot="footer">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+					</view>
+				</van-card>
+			</view>
+			<view class="cardItem">
+				<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-obj="{{item}}" bindtap="jump">
+					<view slot="thumb">
+						<image class="thumbImg" src="{{item.img}}"></image>
+					</view>
+					<view slot="footer">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+					</view>
+				</van-card>
+			</view>
+		</view>
+	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+</view>

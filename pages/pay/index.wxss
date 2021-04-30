@@ -1,0 +1,109 @@
+/* pages/pay/index.wxss */
+.pay {
+  padding: 10rpx 20rpx 100rpx;
+  background: #efefef;
+}
+
+.paycard {
+  background-color: #fff;
+  border-radius: 10rpx;
+  border: 2rpx solid #eee;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.orderPrice{
+  color: #000;
+  font-weight: 600;
+}
+.orderInfo{
+  margin-bottom: 100rpx;
+}
+.orderDesc{
+  color: #bbb;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toEdit {
+  font-weight: normal;
+  float: right;
+  color: #fcaf17;
+}
+.total {
+  float: right;
+}
+.top{
+  font-weight: 600;
+}
+.cardTop {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+
+
+.btnColor {
+  background: #fcaf17 !important;
+  border: none !important;
+  color: #000 !important;
+}
+
+.infoDetails {
+  padding: 20rpx 60rpx;
+  box-sizing: border-box;
+}
+
+.desc1 {
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.desc2 {
+  font-weight: normal;
+  color: #aaa;
+  font-size: 28rpx;
+}
+.bold{
+  font-weight: bold;
+  color: #000;
+}
+
+.address {
+  margin-top: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.btmBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btmBtn view {
+  width: 300rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 35rpx;
+
+}
+
+.nobgc {
+  border: 2rpx solid #eee;
+  background: none;
+}
+
+.bgc {
+  background-color: #ef4136;
+  color: #fff;
+}
+
+.infoCon {
+  margin: 20rpx 0;
+}

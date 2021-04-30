@@ -1,0 +1,76 @@
+/* pages/cart/index.wxss */
+.cart {
+  background: #eeeeee;
+}
+
+.cartitem {
+  background: #fff;
+  padding: 0 20rpx;
+  margin: 10rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.cartitem van-card {
+  width: 100%;
+  position: relative;
+  background: #fff;
+}
+
+image {
+  width: 174rpx;
+  height: 174rpx;
+  border: 2rpx solid #cccccc;
+}
+
+.addCar {
+  padding: 10rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 26rpx;
+  font-size: 24rpx;
+  background: #fcaf17;
+  color: #000;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.corbtn {
+  display: flex;
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+}
+
+.corItem {
+  width: 50rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.reduce {
+  border: 2rpx solid #fcaf17;
+  border-radius: 15rpx;
+  line-height: 30rpx;
+}
+
+.add {
+  background: #fcaf17;
+  border-radius: 15rpx;
+  line-height: 40rpx;
+}
+
+.wannaLike {
+  margin-bottom: 196rpx;
+}
+
+.btnColor{
+  background: #fcaf17 !important;
+  border: none !important;
+  color:#000 !important;
+}

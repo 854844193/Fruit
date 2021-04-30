@@ -1,0 +1,33 @@
+/* pages/search/index.wxss */
+.searchIndex{
+  padding: 0 20rpx;
+}
+.hotSearch,.history{
+  padding: 0 20rpx;
+}
+.history{
+  margin-bottom: 20rpx;
+}
+van-icon{
+  float: right;
+}
+.title{
+  font-size: 28rpx;
+}
+.searchList{
+  display: grid;
+  grid-template-columns: repeat(5, 18%);
+  grid-gap: 10rpx 10rpx;
+}
+.serachItem{
+  width: 84rpx;
+  height: 30rpx;
+  font-size: 24rpx;
+  border-radius: 25rpx;
+  padding: 10rpx 15rpx;
+  margin-top: 15rpx;
+  margin-right: 10rpx;
+  text-align: center;
+  line-height: 30rpx;
+  background: #eee;
+}

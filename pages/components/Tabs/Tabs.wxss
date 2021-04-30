@@ -1,0 +1,76 @@
+.tab {
+  width: 100%;
+  height: 55rpx;
+  font-size: 28rpx;
+  margin: 10rpx auto;
+  border-bottom: 2rpx solid #cccccc;
+}
+
+.btns {
+  width: 100%;
+  height: 55rpx;
+  white-space: nowrap;
+  /* 解决scroll-view标签在子组件无法横向滚动 */
+}
+
+.tabItem {
+  height: 50rpx;
+  margin: 0 10rpx;
+  display: inline-block;
+  /* 解决scroll-view标签在子组件无法横向滚动 */
+  text-align: center;
+}
+
+.cur {
+  font-weight: 600;
+  border-bottom: 4rpx solid #fcaf17;
+}
+
+
+.thumbImg {
+  width: 174rpx;
+  height: 174rpx;
+  border: 2rpx solid #ddd;
+}
+
+.addCar {
+  padding: 10rpx;
+  width: 150rpx;
+  text-align: center;
+  border-radius: 26rpx;
+  font-size: 24rpx;
+  background: #fcaf17;
+  color: #000;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.corbtn {
+  display: flex;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}
+
+.corItem {
+  width: 50rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30rpx;
+
+}
+
+.reduce {
+  background: #d3d7d4;
+}
+
+.add {
+  background: #d3d7d4;
+}
+
+.titleStyle{
+  flex: none !important;
+}

@@ -1,0 +1,9 @@
+<!--pages/personalInfo/index.wxml-->
+<view class="personal">
+	<van-cell-group>
+		<van-cell title="头像" is-link custom-class="custom-class" >	
+				<van-image  width="90rpx" height="90rpx" fit="cover" round src="https://img.yzcdn.cn/vant/cat.jpeg" />
+		</van-cell>
+		<van-cell title="昵称" value="{{username}}" is-link  bind:click="toEdit"/>
+	</van-cell-group>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/editorderInfo/index.wxml-->
+<view class="orderInfo">
+	<view class="history" wx:if="{{inputList.length}}">
+		<view>
+			<text>快捷输入</text>
+			<view class="rightCor">
+				<text wx:if="{{isTap}}" data-num="1" bindtap="rightTap">编辑</text>
+				<text wx:else style="color:#ffd400" data-num="2" bindtap="rightTap">保存</text>
+			</view>
+		</view>
+		<view class="inputItem" wx:for="{{inputList}}" wx:key="index">
+			<view class="itemtext" data-con="{{item.con}}" bindtap="checked">{{item.con}}</view>
+			<van-icon wx:if="{{item.isDelete}}" class="rightIcon" name="clear" color="#aaa" size="32rpx" data-item="{{item}}" bind:click="deletItem" />
+		</view>
+	</view>
+	<view class="current">
+		<view class="inputInfo">
+			<textarea value="{{infoText}}" placeholder="请填写备注,最多50字" maxlength="{{maxlength}}" bindconfirm="onConfirm" bindc="bindText">
+			</textarea>
+		</view>
+		<text class="count">{{inputLength|0}}/{{maxlength}}</text>
+	</view>
+	<van-button custom-class="confirmBtn" round type="primary" color="#ffc20e" block bindtap="confirm">完 成</van-button>
+</view>

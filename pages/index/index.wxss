@@ -1,41 +1,156 @@
 /**index.wxss**/
+.index {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 .header {
   width: 100%;
-  height: 64px;
-  background-color: #45b97c;
-  box-sizing: border-box;
+  height: 80rpx;
   position: relative;
+  background: #ffc20e;
+  box-sizing: border-box;
 }
 
-.nav {
-  width: 100%;
-  height: 30px;
-  position: absolute;
-  left: 30rpx;
-  bottom: 14rpx;
-}
-.navTitle{
-  font-weight:bold ;
-}
-
-.searchBox {
-  position: relative;
-  width: 40%;
-  height: 30px;
-  font-size: 12px;
-  margin-left: 40px;
-  background: rgba(255, 255, 255, 1);
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-.searchText{
+.searchBtn {
+  display: block;
+  width: 95%;
+  color: #d3d7d4;
+  background-color: #fff;
+  border-radius: 30rpx;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-35%,-50%);
+  right: 50%;
+  transform: translate(-50%, 20%);
 }
 
-.alignCenter {
+.container {
+  box-sizing: border-box;
+  padding: 10rpx 20rpx;
+}
+
+.newUser {
+  width: 100%;
+  height: 400rpx;
+  background: #f26522;
+  padding: 8rpx 5rpx;
+}
+
+.shopTitle {
+  color: #fff;
+  margin-bottom: 15rpx;
+}
+
+.shopTitle text:first-child {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.shopTitle text:nth-child(2) {
+  font-size: 32rpx;
+  margin-left: 10rpx;
+}
+
+.shopTitle text:last-child {
+  float: right;
+  margin-top: 10rpx;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+
+.fruitShop {
+  height: 340rpx;
+  padding: 5rpx;
   display: flex;
   align-items: center;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.shopItem {
+  width: 200rpx;
+  padding-top: 20rpx;
+  margin: 0 10rpx;
+}
+
+.shopItem:first-child {
+  margin-left: 0;
+}
+
+.shopItem:last-child {
+  margin-right: 0;
+}
+
+.itemImg {
+  width: 190rpx;
+  height: 190rpx;
+}
+
+.itemImg image {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.itemDesc {
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.itemDesc text:first-child {
+  display: block;
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemDesc text:nth-child(2) {
+  font-size: 28rpx;
+  color: #ef4136;
+}
+
+.itemDesc text:last-child {
+  color: #a1a3a6;
+}
+
+.corbtn {
+  position: unset;
+  margin-top:10rpx;
+  margin-left:20rpx;
+}
+
+.corItem {
+  width: 50rpx;
+  height: 40rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30rpx;
+
+}
+
+.reduce {
+  background: #d3d7d4;
+}
+
+.add {
+  background: #d3d7d4;
+}
+
+.shopItem .van-button {
+  width: 160rpx;
+  color: black !important;
+  margin-left: 20rpx !important;
+}
+
+.shopItem .van-button--round {
+  padding: 0 20rpx;
+}
+
+.container .navTab {
+  width: 100%;
 }

@@ -1,0 +1,12 @@
+<!--pages/editNickname/index.wxml-->
+<view class="edit">
+	<view class="title">用户名:</view>
+	<van-cell-group>
+		<van-field value="{{ username }}" clearable placeholder="请输入用户名" error-message="{{errorMsg}}" maxlength="16" bind:change="usernameChange" />
+	</van-cell-group>
+	<view class="desc">以英文字母或汉字开头，限4-16个字符</view>
+	<van-button custom-class="customClass" round type="primary" color="#ffc20e" block bindtap="confirm">
+		确定
+	</van-button>
+	<van-toast id="van-toast" />
+</view>

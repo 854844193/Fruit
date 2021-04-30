@@ -1,1 +1,178 @@
 /* pages/mine.wxss */
+.topImg {
+  height: 160rpx;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 30rpx;
+  background: #ffc20e;
+}
+
+van-image {
+  margin-right: 20rpx;
+}
+
+.mineCon {
+  margin-top: -10rpx;
+  background: #eeeeee;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.marginBtm {
+  margin-bottom: 15rpx;
+  background: #fff;
+}
+
+.balance {
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.coupon,
+.packet {
+  width: 370rpx;
+  text-align: center;
+}
+
+.nums {
+  font-weight: 600;
+}
+
+.address {
+  height: 410rpx;
+}
+
+.corAdd {
+  height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  background: #fab27b;
+  color: #f26522;
+}
+
+.addInfo {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.addCon {
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #eee;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+}
+
+.leftAdd {
+  width: 70%;
+}
+
+.siteName {
+  font-size: 32rpx;
+  color: black;
+  font-weight: 600;
+}
+
+.tags {
+  margin: 10rpx 0 10rpx -10rpx;
+}
+
+van-tag {
+  margin-left: 10rpx;
+}
+
+.rightIcon {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.rightIcon view {
+  color: #f26522;
+  text-align: center;
+  margin: 0 5rpx;
+}
+
+.quesTip {
+  display: flex;
+  margin: 10rpx 0;
+  align-items: center;
+  font-size: 30rpx;
+  color: #cd9a5b;
+}
+
+.orderType {
+  height: 150rpx;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  color: #011;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderType>view {
+  text-align: center;
+}
+
+.activity {
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.actTitle {
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.actList {
+  height: 230rpx;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.actItem {
+  width: 150rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  background: #eeeeee;
+  margin: 0 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actItem:first-child {
+  margin-left: 0;
+}
+
+.actItem:last-child {
+  margin-right: 0;
+}
+
+.actItemTitle {
+  width: 150rpx;
+  text-align: center;
+  margin-bottom: 5rpx 0;
+  font-size: 28rpx;
+}
+
+.actItemDesc {
+  color: red;
+}
+.girdItem{
+  text-align: center;
+}
+.girdDesc{
+  font-size: 24rpx;
+}

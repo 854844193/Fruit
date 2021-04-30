@@ -1,1 +1,73 @@
-/* pages/category/category.wxss */
+
+.category {
+  display: flex;
+  height: 100vh;
+}
+
+.leftNav {
+  width: 25%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+}
+
+.leftNav view {
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.rightList {
+  width: 75%;
+  margin: 0;
+}
+
+.selected {
+  background-color: #fff;
+  border-left: 2px solid #fcaf17;
+  font-weight: bold;
+  color: black;
+  transition: all 0.3s;
+}
+
+.normal {
+  background-color: #f4f4f4;
+  color:#0f0808c9;
+}
+
+
+swiper {
+  height: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.tab {
+  width: 100%;
+  height: 55rpx;
+  font-size: 28rpx;
+  margin: 10rpx auto;
+  border-bottom: 2rpx solid #cccccc;
+}
+
+.btns {
+  width: 100%;
+  height: 55rpx;
+  white-space: nowrap;
+  /* 解决scroll-view标签在子组件无法横向滚动 */
+}
+
+.tabItem {
+  height: 50rpx;
+  margin: 0 10rpx;
+  display: inline-block;
+  /* 解决scroll-view标签在子组件无法横向滚动 */
+  text-align: center;
+}
+
+
+
+
+image {
+  width: 174rpx;
+  height: 174rpx;
+}
+

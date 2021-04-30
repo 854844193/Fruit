@@ -1,0 +1,114 @@
+<view class="details">
+	<!-- 返回图标 -->
+	<!-- <view class="back" bindtap="returnBack">
+		<van-icon name="arrow-left" size="32rpx" />
+	</view> -->
+	<!-- 内容区 -->
+	<view class="dCon">
+		<!-- 商品图片展示 -->
+		<swiper class="dImg">
+			<block wx:for="{{dImgList}}" wx:key="*this">
+				<swiper-item>
+					<cover-image src="{{item}}"></cover-image>
+					<view class="imgIndex">
+						<text class="curIndex">{{index+1}}</text>
+						<text class="allIndex">/{{dImgList.length}}</text>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+
+		<!-- 新客专享 -->
+		<view class="newUser">
+			<view class="leftInfo">
+				<view class="currentPrice">
+					￥<text>0.10</text>/kg
+					<button size="mini">新客价 限1份</button>
+				</view>
+				<view class="oldPrice">
+					￥5.99
+				</view>
+			</view>
+			<view class="rightInfo">
+				<view class="djsText">距抢购结束仅剩</view>
+				<view class="daojishi">
+					<view class="time">{{djsTime.H}}</view>:
+					<view class="time">{{djsTime.M}}</view>:
+					<view class="time">{{djsTime.S}}</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 分享 -->
+		<view class="share">
+			<view class="shareLeft">
+				<view class="shareTitle">新鲜广西沃柑￥5.99/kg</view>
+				<van-tag class="tagIcon" color="#d3d7d4" plain>
+					<van-icon class="adIcon" name="location" color="#ef4136" />
+					<text style="color:#000">产自广西</text>
+				</van-tag>
+			</view>
+			<view class="shareRight">
+				<van-icon class="shareIcon" name="share" color="#fcaf17" size="50rpx" />
+				<view>分享</view>
+			</view>
+		</view>
+
+		<!-- 保障信息 -->
+		<view class="proInfo">
+			<!-- 平台保障 -->
+			<van-cell title-class="proTitle" is-link border="false" bindtap="onProShow">
+				<view slot="title">
+					<text class="van-cell-text leftDesc">平台保障</text>
+					<text class="midText" style="color:#e0861a">闪电退款•48小时无忧退•价格保护</text>
+				</view>
+			</van-cell>
+			<!-- 自提信息 -->
+			<van-cell title-class="proTitle" border="false">
+				<view slot="title">
+					<text class="van-cell-text leftDesc">自提信息</text>
+					<text class="midText" >美团优选-恒大名都邻里便利店，明天16:00提货</text>
+				</view>
+			</van-cell>
+			<!-- 特惠榜 -->
+			<van-cell title-class="proTitle" is-link border="false" bindtap="toDiscount">
+				<view slot="title">
+					<van-tag class="proTag" color="#f15a22">
+						<van-icon class="proIcon" name="gold-coin" size="30rpx" color="#ffe600" />
+						<text>特惠榜</text>
+					</van-tag>
+					<text style="margin-left:30rpx" >入选特惠榜</text>
+				</view>
+			</van-cell>
+			<!-- 平台保障  ---动作面板 -->
+			<van-action-sheet show="{{ proShow }}">
+				<view class="proList">
+					<view class="listTitle">
+						<text>平台保障</text>
+						<van-icon name="cross" color="black" size="30rpx" style="float:right" bindtap="onProClose" />
+					</view>
+					<view class="proItem" wx:for="{{actions}}" wx:key="index">
+						<view class="itemTitle">
+							<van-icon name="youzan-shield" color="#c7a252" size="30rpx" />
+							<text>{{item.name}}</text>
+						</view>
+						<view class="itemDesc">
+							<text>{{item.subname}}</text>
+						</view>
+					</view>
+					<view class="closeBtn" bindtap="onProClose">
+						<text>知道了</text>
+					</view>
+				</view>
+			</van-action-sheet>
+		</view>
+	</view>
+	<BTop floorstatus="{{floorstatus}}" bind:change="toTop"></BTop>
+	<!-- 底部操作栏 -->
+	<van-goods-action>
+		<van-goods-action-icon icon="chat-o" text="客服" info="5" />
+		<van-goods-action-icon icon="cart-o" text="购物车" info="5" />
+		<van-goods-action-button color="#fcaf17" text="加入购物车" type="warning" />
+		<van-goods-action-button plain color="#fcaf17" text="立即购买" />
+	</van-goods-action>
+</view>

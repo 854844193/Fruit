@@ -1,0 +1,22 @@
+<!--pages/search/index.wxml-->
+<view class="searchIndex">
+	<van-search value="{{ searchVal }}" placeholder="{{tipText}}" shape="round" use-action-slot bind:change="onChange" bind:search="onSearch">
+		<view slot="action" bind:tap="onSearch" style="color:#f26522;font-weight:600">搜索</view>
+	</van-search>
+	<view class="history" wx:if="{{historyList.length>0}}">
+		<view class="title">
+			<text>历史搜索</text>
+			<van-icon name="delete-o" size="40rpx" bind:click="deleteHistory" />
+			<van-dialog id="van-dialog"/>
+		</view>
+		<view class="searchList">
+			<view class="serachItem" wx:for="{{historyList}}" wx:key="index" data-text="{{item}}" bindtap="checkItem">{{item}}</view>
+		</view>
+	</view>
+	<view class="hotSearch">
+		<view class="title">热门搜索</view>
+		<view class="searchList">
+			<view class="serachItem" wx:for="{{searchList}}" wx:key="index" data-text="{{item}}" bindtap="checkItem">{{item}}</view>
+		</view>
+	</view>
+</view>

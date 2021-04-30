@@ -1,0 +1,26 @@
+/* pages/editPersonInfo/index.wxss */
+page{
+  background: #efefef;
+  padding-top: 10rpx;
+}
+.btnText{
+  color: black;
+}
+.isEdit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.block {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+}

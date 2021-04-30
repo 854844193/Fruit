@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "BTop": "../components/BackTop/BackTop"
+  },
   "navigationBarTitleText": "我的"
 }

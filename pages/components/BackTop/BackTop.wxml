@@ -1,0 +1,4 @@
+<!--pages/components/BackTop/BackTop.wxml-->
+<view class="goTop"  hidden='{{!floorstatus}}' bindtap="goTop">
+	<van-icon name="back-top" size="50rpx" />
+</view>

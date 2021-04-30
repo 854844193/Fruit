@@ -1,0 +1,16 @@
+<!--pages/receiving List/index.wxml-->
+<view>
+	<view class="itemCard" wx:for="{{personList}}" wx:key="index" data-ind="{{index}}" bindtap="onChange">
+		<van-checkbox value="{{ item.checked }}" checked-color="#fcaf17" data-ind="{{index}}" catchtap="onChange">{{item.name}}</van-checkbox>
+		<view class="rightbox">
+			<view>{{item.phone}}</view>
+			<view class="grey">|</view>
+			<view class="edit grey" data-obj="{{item}}" catchtap="toedit">编辑</view>
+		</view>
+	</view>
+	<van-goods-action>
+		<van-goods-action-button color="#fcaf17" bind:click="onClickButton">
+			<text class="btnText">添加收货人</text>
+		</van-goods-action-button>
+	</van-goods-action>
+</view>

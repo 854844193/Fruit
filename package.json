@@ -1,0 +1,23 @@
+{
+  "name": "miniprogram-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/854844193/Fruit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/854844193/Fruit/issues"
+  },
+  "homepage": "https://github.com/854844193/Fruit#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.6.8"
+  }
+}

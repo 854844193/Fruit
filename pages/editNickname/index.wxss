@@ -1,0 +1,20 @@
+/* pages/editNickname/index.wxss */
+.edit {
+  height: 100vh;
+  background: #eee;
+}
+.title{
+  padding: 10rpx 30rpx;
+}
+.desc {
+  margin-top: 10rpx;
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  color: #aaa;
+}
+
+.customClass {
+  margin-top: 30rpx;
+  font-size: 40rpx !important;
+  color: black !important;
+}

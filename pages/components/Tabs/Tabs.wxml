@@ -1,0 +1,36 @@
+<view class="tab">
+	<van-tabs active="{{isActived}}" animated swipeable sticky color="#fcaf17" ellipsis="false" bind:change="{{isActived==0?'toggle':''}}" bind:click="toggle" tab-class="titleStyle">
+		<van-tab wx:for="{{navTab}}" wx:key="index" title="{{item}}">
+			<view class="cardItem">
+				<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-num="3" data-id="{{item}}" bindtap="jump">
+					<view slot="thumb">
+						<image class="thumbImg" src="{{item.img}}"></image>
+					</view>
+					<view slot="footer">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+					</view>
+				</van-card>
+			</view>
+			<view class="cardItem">
+				<van-card wx:for="{{shopList}}" wx:key="index" price="{{item.currentPrice}}" desc="描述信息" title="{{item.fname}}" data-num="3" data-id="{{item}}" bindtap="jump">
+					<view slot="thumb">
+						<image class="thumbImg" src="{{item.img}}"></image>
+					</view>
+					<view slot="footer">
+						<view wx:if="{{item.nums!= 0}}" class="corbtn">
+							<view class="corItem reduce" data-item="{{item}}" data-index="{{index}}" data-type="reduce" catchtap="corNums">-</view>
+							<view class="corItem nums">{{item.nums}}</view>
+							<view class="corItem add" data-item="{{item}}" data-index="{{index}}" data-type="add" catchtap="corNums">+</view>
+						</view>
+						<view class="addCar" wx:if="{{item.nums== 0}}" data-item="{{item}}" data-index="{{index}}" catchtap="addCar">加入购物车</view>
+					</view>
+				</van-card>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>

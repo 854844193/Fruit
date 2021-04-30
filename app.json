@@ -1,47 +1,94 @@
 {
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-loading": "@vant/weapp/loading/index"
+  },
   "pages": [
     "pages/index/index",
+    "pages/receivingList/index",
+    "pages/editPersonInfo/index",
+    "pages/pay/index",
+    "pages/editorderInfo/index",
+    "pages/cart/index",
+    "pages/discount/index",
+    "pages/searchDetail/index",
+    "pages/search/index",
+    "pages/personalInfo/index",
     "pages/mine/mine",
-    "pages/category/category"
+    "pages/orderType/index",
+    "pages/editNickname/index",
+    "pages/category/category",
+    "pages/details/index"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#45b97c",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffc20e",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "backgroundColor": "",
     "color": "black",
-    "position":"bottom",
+    "position": "bottom",
     "selectedColor": "#ffc20e",
     "list": [
       {
         "pagePath": "pages/index/index",
         "iconPath": "icons/index.png",
-        "selectedIconPath": "icons/indexSelected.png",
+        "selectedIconPath": "icons/indexed.png",
         "text": "首页"
       },
-    
       {
         "pagePath": "pages/category/category",
         "iconPath": "icons/category.png",
-        "selectedIconPath": "icons/categorySelected.png",
+        "selectedIconPath": "icons/categoryed.png",
         "text": "种类"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "icons/shopCart.png",
+        "selectedIconPath": "icons/shopCarted.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "icons/wode.png",
-        "selectedIconPath": "icons/wodeSelected.png",
+        "selectedIconPath": "icons/wodeed.png",
         "text": "我的"
       }
-      
     ]
   },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
